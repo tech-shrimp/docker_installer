@@ -12,26 +12,12 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    - name: Pull Docker Images and Package
+    - name: Download installers
       run: |
          curl -o docker_desktop_installer_windows_amd64.exe "https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe"
 
-    - name: Create Release
-      uses: actions/create-release@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Release
+      uses: softprops/action-gh-release@v2
       with:
-        tag_name: v1.0.0
-        release_name: Release v1.0.0
-        draft: false
-        prerelease: false
-
-    - name: Upload Release Asset
-      uses: actions/upload-release-asset@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: docker_desktop_installer_windows_amd64.exe
-        asset_name: docker_desktop_installer_windows_amd64.exe
-        asset_content_type: application/octet-stream
+        files: |
+          docker_desktop_installer_windows_amd64.exe
