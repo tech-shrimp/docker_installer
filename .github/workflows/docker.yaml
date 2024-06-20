@@ -21,4 +21,4 @@ jobs:
       with:
         files: |
           docker_desktop_installer_windows_amd64.exe
-          tag_name: v1.0.0
+        tag_name: v1.0.0
