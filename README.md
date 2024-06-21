@@ -13,13 +13,14 @@ B站，抖音，Youtube全网同名，转载请注明作者<br>
 # Docker安装
 ## Linux
 一键安装命令
-```commandline
-sudo curl -fsSL https://raw.githubusercontent.com/tech-shrimp/docker_installer/main/linux.sh| bash -s docker --mirror Aliyun
+```
+sudo curl -fsSL https://github.com/tech-shrimp/docker_installer/releases/download/latest/linux.sh| bash -s docker --mirror Aliyun
 ```
 
 ## Windows
 任务栏搜索功能，启用"适用于Linux的Windows子系统" <br>
 ![](images/windows功能.png)
+
 管理员权限打开命令提示符，安装wsl2<br>
 ```
 wsl --set-default-version 2
