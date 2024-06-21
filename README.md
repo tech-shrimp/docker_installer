@@ -10,6 +10,7 @@
 作者：**[技术爬爬虾](https://github.com/tech-shrimp/me)**<br>
 B站，抖音，Youtube全网同名，转载请注明作者<br>
 
+# Docker下载
 ## Linux
 一键安装命令
 ```commandline
@@ -48,3 +49,42 @@ https://github.com/tech-shrimp/docker_installer/releases
 ![](images/mac安装包.png)
 注意区分CPU架构类型 Intel芯片选择x86_64, 苹果芯片选择arm64<br>
 下载好双击安装即可
+
+# 镜像加速
+
+### 方案一  镜像站
+现在只有很少的国内镜像站存活，不保证可用性
+不保证镜像数量
+
+#### Linux配置镜像站
+```
+sudo vi /etc/docker/daemon.json
+```
+输入下列内容，最后按ESC，输入 :wq! 保存退出。
+```
+{
+    "registry-mirrors": [
+        "https://docker.m.daocloud.io",
+        "https://docker.1panel.live"
+    ]
+}
+```
+重启docker
+```
+service docker restart
+```
+### Windows/Mac配置镜像站
+Setting->Docker Engine->添加上换源的那一段，如下图
+![](images/win加速.png)
+
+
+
+### 方案二  转存到阿里云
+使用Github Action将国外的Docker镜像转存到阿里云私有仓库，供国内服务器使用，免费易用
+
+- 支持DockerHub, gcr.io, k8s.io, ghcr.io等任意仓库
+- 支持最大40GB的大型镜像
+- 使用阿里云的官方线路，速度快
+
+项目地址: 
+https://github.com/tech-shrimp/docker_image_pusher
