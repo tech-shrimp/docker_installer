@@ -16,6 +16,7 @@ jobs:
 
     - name: Download installers
       run: |
+         curl -o linux.sh "https://get.docker.com"
          curl -o docker_desktop_installer_windows_x86_64.exe "https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe"
          curl -o docker_desktop_installer_mac_arm64.dmg "https://desktop.docker.com/mac/main/arm64/Docker.dmg"
          curl -o docker_desktop_installer_mac_x84_64.dmg "https://desktop.docker.com/mac/main/amd64/Docker.dmg"
@@ -26,6 +27,7 @@ jobs:
       uses: softprops/action-gh-release@v2
       with:
         files: |
+          linux.sh
           docker_desktop_installer_windows_x86_64.exe
           docker_desktop_installer_mac_arm64.dmg
           docker_desktop_installer_mac_x84_64.dmg
