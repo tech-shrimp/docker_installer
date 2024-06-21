@@ -4,6 +4,9 @@ on:
   workflow_dispatch:
     inputs:
 
+permissions:
+  contents: write
+
 jobs:
   download_installer:
     runs-on: ubuntu-latest
