@@ -1,11 +1,11 @@
 # Docker官方安装包
 
 2024年6月以来，国内大量Docker镜像网站停服，无法安装Docker<br>
-本仓库致力于解决Docker因网络问题无法安装的问题。<br>
+本仓库致力于解决Docker因网络问题无法使用的问题。<br>
 
-### 原理：
-使用Github Action将官网的安装脚本/安装包定时下载到本地址，供自由下载<br>
-官方来源，安全可靠<br>
+### 特点：
+- 使用Github Action将官网的安装脚本/安装包定时下载到本地址，供国内使用<br>
+- 官方安装包，安全可靠<br>
 
 作者：**[技术爬爬虾](https://github.com/tech-shrimp/me)**<br>
 B站，抖音，Youtube全网同名，转载请注明作者<br>
