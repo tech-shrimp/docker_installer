@@ -23,7 +23,7 @@ service docker start
 ```
 
 ## 1.2 Windows
-任务栏搜索功能，启用"适用于Linux的Windows子系统" <br>
+任务栏搜索功能，启用"适用于Linux的Windows子系统" + "虚拟机平台" <br>
 ![](images/windows功能.png)
 
 管理员权限打开命令提示符，安装wsl2<br>
