@@ -19,7 +19,7 @@ sudo curl -fsSL https://github.com/tech-shrimp/docker_installer/releases/downloa
 ```
 启动docker
 ```
-service docker start
+sudo service docker start
 ```
 
 ## 1.2 Windows
@@ -88,7 +88,7 @@ sudo vi /etc/docker/daemon.json
 ```
 重启docker
 ```
-service docker restart
+sudo service docker restart
 ```
 
 ### Windows/Mac配置镜像站
