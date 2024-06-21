@@ -2,7 +2,9 @@ name: Docker Installer Download
 
 on:
   workflow_dispatch:
-    inputs:
+
+permissions:
+  contents: write
 
 jobs:
   download_installer:
@@ -14,11 +16,19 @@ jobs:
 
     - name: Download installers
       run: |
-         curl -o docker_desktop_installer_windows_amd64.exe "https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe"
+         curl -o docker_desktop_installer_windows_x86_64.exe "https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe"
+         curl -o docker_desktop_installer_mac_arm64.dmg "https://desktop.docker.com/mac/main/arm64/Docker.dmg"
+         curl -o docker_desktop_installer_mac_x84_64.dmg "https://desktop.docker.com/mac/main/amd64/Docker.dmg"
+         curl -o docker_desktop_installer_linux_debian_x84_64.dmg "https://desktop.docker.com/linux/main/amd64/149282/docker-desktop-4.30.0-amd64.deb"
+         curl -o docker_desktop_installer_linux_fedora_x84_64.dmg "https://desktop.docker.com/linux/main/amd64/149282/docker-desktop-4.30.0-x86_64.rpm"
 
     - name: Release
       uses: softprops/action-gh-release@v2
       with:
         files: |
-          docker_desktop_installer_windows_amd64.exe
-        tag_name: v1.0.0
+          docker_desktop_installer_windows_x86_64.exe
+          docker_desktop_installer_mac_arm64.dmg
+          docker_desktop_installer_mac_x84_64.dmg
+          docker_desktop_installer_linux_debian_x84_64.dmg
+          docker_desktop_installer_linux_fedora_x84_64.dmg
+        tag_name: latest
