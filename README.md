@@ -11,8 +11,8 @@
 作者：**[技术爬爬虾](https://github.com/tech-shrimp/me)**<br>
 B站，抖音，Youtube全网同名，转载请注明作者<br>
 
-# Docker安装
-## Linux
+# 1. Docker安装
+## 1.1 Linux
 一键安装命令
 ```
 sudo curl -fsSL https://github.com/tech-shrimp/docker_installer/releases/download/latest/linux.sh| bash -s docker --mirror Aliyun
@@ -22,7 +22,7 @@ sudo curl -fsSL https://github.com/tech-shrimp/docker_installer/releases/downloa
 service docker start
 ```
 
-## Windows
+## 1.2 Windows
 任务栏搜索功能，启用"适用于Linux的Windows子系统" <br>
 ![](images/windows功能.png)
 
@@ -49,14 +49,14 @@ https://github.com/tech-shrimp/docker_installer/releases
 start /w "" "Docker Desktop Installer.exe" install --installation-dir=D:\Docker
 ```
 
-## Mac
+## 1.3 Mac
 进入此项目的Release，下载Mac系统的安装包<br>
 https://github.com/tech-shrimp/docker_installer/releases
 ![](images/mac安装包.png)
 注意区分CPU架构类型 Intel芯片选择x86_64, 苹果芯片选择arm64<br>
 下载好双击安装即可
 
-# Pull镜像
+# 2. Pull镜像
 
 ### 方案一  转存到阿里云
 使用Github Action将国外的Docker镜像转存到阿里云私有仓库，供国内服务器使用，免费易用
@@ -90,6 +90,7 @@ sudo vi /etc/docker/daemon.json
 ```
 service docker restart
 ```
+
 ### Windows/Mac配置镜像站
 Setting->Docker Engine->添加上换源的那一段，如下图
 ![](images/win加速.png)
@@ -101,6 +102,6 @@ https://github.com/wukongdaily/DockerTarBuilder
 ### 方案四 使用一键脚本
 bash -c "$(curl -sSLf https://xy.ggbond.org/xy/docker_pull.sh)" -s 完整镜像名
 
-# 去哪里找镜像
+# 3. 去哪里找镜像
 
 https://docker.fxxk.dedyn.io/
