@@ -69,8 +69,9 @@ https://github.com/tech-shrimp/docker_installer/releases
 https://github.com/tech-shrimp/docker_image_pusher
 
 ### 方案二 镜像站
-现在只有很少的国内镜像站存活，不保证可用性<br>
-不保证镜像数量
+现在只有很少的国内镜像站存活<br>
+不保证镜像齐全,且用且珍惜<br>
+
 
 #### Linux配置镜像站
 ```
