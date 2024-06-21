@@ -10,7 +10,7 @@
 作者：**[技术爬爬虾](https://github.com/tech-shrimp/me)**<br>
 B站，抖音，Youtube全网同名，转载请注明作者<br>
 
-# Docker下载
+# Docker安装
 ## Linux
 一键安装命令
 ```commandline
@@ -50,10 +50,20 @@ https://github.com/tech-shrimp/docker_installer/releases
 注意区分CPU架构类型 Intel芯片选择x86_64, 苹果芯片选择arm64<br>
 下载好双击安装即可
 
-# 镜像加速
+# Pull镜像
 
-### 方案一  镜像站
-现在只有很少的国内镜像站存活，不保证可用性
+### 方案一  转存到阿里云
+使用Github Action将国外的Docker镜像转存到阿里云私有仓库，供国内服务器使用，免费易用
+
+- 支持DockerHub, gcr.io, k8s.io, ghcr.io等任意仓库
+- 支持最大40GB的大型镜像
+- 使用阿里云的官方线路，速度快
+
+项目地址: 
+https://github.com/tech-shrimp/docker_image_pusher
+
+### 方案二 镜像站
+现在只有很少的国内镜像站存活，不保证可用性<br>
 不保证镜像数量
 
 #### Linux配置镜像站
@@ -77,14 +87,13 @@ service docker restart
 Setting->Docker Engine->添加上换源的那一段，如下图
 ![](images/win加速.png)
 
+### 方案三 离线镜像
+使用Github Action下载docker离线镜像
+https://github.com/wukongdaily/DockerTarBuilder
 
+### 方案四 使用一键脚本
+bash -c "$(curl -sSLf https://xy.ggbond.org/xy/docker_pull.sh)" -s 完整镜像名
 
-### 方案二  转存到阿里云
-使用Github Action将国外的Docker镜像转存到阿里云私有仓库，供国内服务器使用，免费易用
+# 去哪里找镜像
 
-- 支持DockerHub, gcr.io, k8s.io, ghcr.io等任意仓库
-- 支持最大40GB的大型镜像
-- 使用阿里云的官方线路，速度快
-
-项目地址: 
-https://github.com/tech-shrimp/docker_image_pusher
+https://docker.fxxk.dedyn.io/
