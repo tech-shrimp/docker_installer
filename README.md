@@ -37,6 +37,7 @@ https://github.com/tech-shrimp/docker_installer/releases
 如果想自己指定安装目录，可以使用命令行的方式
 参数 --installation-dir=D:\Docker可以指定安装位置
 
+
 ```
 start /w "" "Docker Desktop Installer.exe" install --installation-dir=D:\Docker
 ```
