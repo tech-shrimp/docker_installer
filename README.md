@@ -106,7 +106,7 @@ https://github.com/wukongdaily/DockerTarBuilder
 ### 方案四 使用一键脚本
 bash -c "$(curl -sSLf https://xy.ggbond.org/xy/docker_pull.sh)" -s 完整镜像名
 
-### 方案五 使用Cloudflare自建镜像加速
+### 方案五 使用Cloudflare worker 自建镜像加速
 https://github.com/cmliu/CF-Workers-docker.io
 
 # 3. 去哪里找镜像
