@@ -17,10 +17,9 @@ B站，抖音，Youtube全网同名，转载请注明作者<br>
 ```
 sudo curl -fsSL https://github.com/tech-shrimp/docker_installer/releases/download/latest/linux.sh| bash -s docker --mirror Aliyun
 ```
-备用（如果Github链接有问题，可以使用以下国内链接）：
-```
-sudo curl -fsSL https://gitee.com/tech-shrimp/docker_installer/releases/download/latest/linux.sh| bash -s docker --mirror Aliyun
-``````
+
+> 备用（如果Github访问不了，可以使用以下链接）
+> sudo curl -fsSL https://gitee.com/tech-shrimp/docker_installer/releases/download/latest/linux.sh| bash -s docker --mirror Aliyun
 
 启动docker
 ```
@@ -106,6 +105,9 @@ https://github.com/wukongdaily/DockerTarBuilder
 
 ### 方案四 使用一键脚本
 bash -c "$(curl -sSLf https://xy.ggbond.org/xy/docker_pull.sh)" -s 完整镜像名
+
+### 方案五 使用Cloudflare自建镜像加速
+https://github.com/cmliu/CF-Workers-docker.io
 
 # 3. 去哪里找镜像
 
