@@ -17,6 +17,11 @@ B站，抖音，Youtube全网同名，转载请注明作者<br>
 ```
 sudo curl -fsSL https://github.com/tech-shrimp/docker_installer/releases/download/latest/linux.sh| bash -s docker --mirror Aliyun
 ```
+备用（如果Github链接有问题，可以使用以下国内链接）：
+```
+sudo curl -fsSL https://gitee.com/tech-shrimp/docker_installer/releases/download/latest/linux.sh| bash -s docker --mirror Aliyun
+``````
+
 启动docker
 ```
 sudo service docker start
