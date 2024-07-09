@@ -6,14 +6,14 @@
 ### 特点：
 - 使用Github Action将官网的安装脚本/安装包定时下载到本项目Release，供国内使用<br>
 - 官方安装包，安全可靠<br>
-- 每天定时同步，保证最新<br>
+- 每天自动定时同步，保证最新<br>
 
 作者：**[技术爬爬虾](https://github.com/tech-shrimp/me)**<br>
 B站，抖音，Youtube全网同名，转载请注明作者<br>
 
 # 1. Docker安装
 ## 1.1 Linux
-一键安装命令
+一键安装命令（每天自动从官网定时同步）
 ```
 sudo curl -fsSL https://github.com/tech-shrimp/docker_installer/releases/download/latest/linux.sh| bash -s docker --mirror Aliyun
 ```
@@ -77,9 +77,20 @@ https://github.com/tech-shrimp/docker_image_pusher
 ### 方案二 镜像站
 现在只有很少的国内镜像站存活<br>
 不保证镜像齐全,且用且珍惜<br>
+以下三个镜像站背靠较大的开源项目，优先推荐<br>
+
+|项目名称|项目地址| 加速地址|
+| ----------- | ----------- |----------- |
+|1Panel|[https://github.com/1Panel-dev/1Panel/](https://github.com/1Panel-dev/1Panel/)|https://docker.1panel.live|
+|Daocloud|[https://github.com/DaoCloud/public-image-mirror](https://github.com/DaoCloud/public-image-mirror)|https://docker.1panel.live|
+|耗子面板|[https://github.com/TheTNB/panel](https://github.com/TheTNB/panel 	)|https://hub.rat.dev|
 
 
 #### Linux配置镜像站
+
+
+
+
 ```
 sudo vi /etc/docker/daemon.json
 ```
@@ -88,7 +99,8 @@ sudo vi /etc/docker/daemon.json
 {
     "registry-mirrors": [
         "https://docker.m.daocloud.io",
-        "https://docker.1panel.live"
+        "https://docker.1panel.live",
+        "https://hub.rat.dev"
     ]
 }
 ```
