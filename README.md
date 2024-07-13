@@ -110,7 +110,7 @@ sudo vi /etc/docker/daemon.json
 sudo service docker restart
 ```
 
-### Windows/Mac配置镜像站
+#### Windows/Mac配置镜像站
 Setting->Docker Engine->添加上换源的那一段，如下图
 ![](images/win加速.png)
 
